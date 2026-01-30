@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- NuGet metadata -->
+    <PackageId>Infertus.Geo.Location</PackageId>
+    <Version>1.1.0</Version>
+    <Authors>Lukasz Kulik</Authors>
+    <Company>Infertus</Company>
+    <Description>Lightweight .NET library for GPS-based location, live tracking, address lookup, reverse geocoding, and smart caching of search results.</Description>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/Boughpohpue/GeoLocation</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Infertus.Geo.Primitives" Version="1.1.0" />
+    <PackageReference Include="Infertus.Mapper" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Device">
+      <HintPath>..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\System.Device.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\..\..\Windows\Microsoft.NET\Framework\v4.0.30319\System.Device.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib\net8.0</PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
